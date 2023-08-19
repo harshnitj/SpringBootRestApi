@@ -21,13 +21,8 @@ import com.employee.rest.model.Employee;
 import com.employee.rest.repository.EmployeeRepository;
 
 @RestController
-
+@RequestMapping("/")
 public class EmployeeController {
-	@RequestMapping("/")
-	public String helloFromRoot() {
-	
-		return "Hello From Root";
-	}
 	
 	@Autowired
 	EmployeeRepository employeeRepository;
