@@ -21,7 +21,7 @@ import com.employee.rest.model.Employee;
 import com.employee.rest.repository.EmployeeRepository;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api")
 public class EmployeeController {
 	
 	@Autowired
