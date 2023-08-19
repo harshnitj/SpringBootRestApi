@@ -21,12 +21,17 @@ import com.employee.rest.model.Employee;
 import com.employee.rest.repository.EmployeeRepository;
 
 @RestController
-@RequestMapping("/api")
-public class EmployeeController {
 
+public class EmployeeController {
+	@RequestMapping("/")
+	public String helloFromRoot() {
+	
+		return "Hello From Root";
+	}
+	
 	@Autowired
 	EmployeeRepository employeeRepository;
-
+	
 	@PostMapping("/employees")
 	public String createNewEmployee(@RequestBody Employee employee) {
 		employeeRepository.save(employee);
